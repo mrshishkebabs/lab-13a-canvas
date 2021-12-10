@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Three Circles</title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="600" height="600">
+    
+    </canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+
+            context.fillStyle = "#B3DAF1";
+
+            for (var i = 0; i < 3; i++) {
+                draw_circle(300, 300, 150, "red");
+                draw_circle(300, 300, 100, "blue");
+                draw_circle(300, 300, 50, "green");
+            }
+
+            function draw_circle (x, y, r, color) {
+                context.fillStyle = color;
+                context.beginPath();
+                context.arc(x, y, r, 0, 2 * Math.PI, true);
+                context.closePath();
+                context.fill();
+            }
+
+		}
+
+	</script>
+
+</body>
+</html>

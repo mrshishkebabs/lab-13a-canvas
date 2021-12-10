@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom Circle</title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="300" height="300">
+
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+
+			var width = sketch.width;
+            var height = sketch.height;	
+            var raduis = parseInt(prompt("Enter a radius:"), 10);
+            var color = prompt("Enter a color in HEX:");
+
+            context.fillStyle = color;
+			
+            context.beginPath();
+            context.arc(width/2, height/2, raduis, 0, 2 * Math.PI, true);
+            context.closePath();
+            context.fill();
+
+		}
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Four by Seven</title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="600" height="400">
+
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+
+            context.fillStyle = "#E7C8FA";
+
+            for (let c = 1; c <= 7; c++) { //Column
+                for (let r = 1; r <= 4; r++) { //Roww
+                    context.beginPath();
+                    context.arc((r * 50), (c * 50), 20, 0, 2 * Math.PI, true);
+                    context.closePath();
+                    context.fill();
+                }   
+            }
+		}
+
+	</script>
+
+</body>
+</html>

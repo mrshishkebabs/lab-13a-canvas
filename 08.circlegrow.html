@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cirle Grow</title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="600" height="600">
+    
+    </canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+
+            context.fillStyle = "#B3DAF1";
+
+            for (var i = 1; i <= 10; i++) {
+                draw_circle((50*i), (50*i), (i*3));
+            }
+
+            function draw_circle (x, y, r) {
+                context.fillStyle = "black";
+                context.beginPath();
+                context.arc(x, y, r, 0, 2 * Math.PI, true);
+                context.closePath();
+                context.fill();
+            }
+		}
+
+	</script>
+
+</body>
+</html>

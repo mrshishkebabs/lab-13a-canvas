@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checker Board</title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="600" height="600">
+
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+
+			context.fillStyle = "#000000";
+
+			context.fillRect(48, 48, 404, 404);
+
+			for (var r = 1; r <= 8; r++) { //OUTER LOOP: (a column of 8 things; vertical dimensions)
+				if (r % 2 == 0) { // EVEN rows
+					for (i = 1; i <= 8; i++) { // INNER LOOP
+						if (i % 2 == 0) { // EVEN squares
+							context.fillStyle = "#ffffff"; //white (even squares in even rows)
+							context.fillRect((i * 50), (r * 50), 50, 50);
+						}	else { // odd squares
+							context.fillStyle = "#000000"; //black (even squares in even rows)
+							context.fillRect((i * 50), (r * 50), 50, 50);
+						}
+					}
+				} else { // ODD rows
+						for (i = 1; i <= 8; i++) { // INNER LOOP
+							if (i % 2 == 0) { // EVEN squares
+							context.fillStyle = "#000000"; //black (even squares in even rows)
+							context.fillRect((i * 50), (r * 50), 50, 50);
+						}	else { // odd squares
+							context.fillStyle = "#ffffff"; //white (even squares in even rows)
+							context.fillRect((i * 50), (r * 50), 50, 50);
+						}
+					}
+				}
+			}
+		}
+	</script>

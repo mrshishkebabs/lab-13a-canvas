@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Five</title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="300" height="300">
+
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+
+			context.fillStyle = "#0000ff";
+
+			for (var i = 0; i <= 4; i++) {
+        		context.fillRect((i * 25), 20, 20, 20);
+			}
+		}
+
+	</script>
+
+</body>
+</html>
