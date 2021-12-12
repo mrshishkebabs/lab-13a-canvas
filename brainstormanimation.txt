@@ -1,0 +1,4 @@
+Animation: Ball flowing around the page.
+These balls will show the hidden text that are within the text
+If someone where to click outside of the hyperlink, the color will reverse and show the hidden text while the ball will occasionally hide the text.
+
